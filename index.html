@@ -16,7 +16,7 @@
 <body>
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="nav w3-hide-small petite-ecriture">
+<nav class="nav hide-small petite-ecriture">
   <!-- Avatar image in top left corner -->
   <img src="images/nvLogo1.png" class="logo">
   <hr class="barre">
@@ -43,13 +43,13 @@
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item button-nav" style="width:20% !important">ACCUEIL</a>
-    <a href="#competences" class="w3-bar-item button-nav" style="width:20% !important">COMPETENCES</a>
-    <a href="#projects" class="w3-bar-item button-nav" style="width:20% !important">PROJETS</a>
-    <a href="#parcours" class="w3-bar-item button-nav" style="width:20% !important">FORMATIONS</a>
-    <a href="#contact" class="w3-bar-item button-nav" style="width:20% !important">CONTACT</a>
+<div class="w3-top hide-large mini-nav" id="myNavbar">
+  <div class="inline">
+    <a href="#" class="button-nav">ACCUEIL</a>
+    <a href="#competences" class="button-mini-nav">COMPETENCES</a>
+    <a href="#projects" class="button-mini-nav">PROJETS</a>
+    <a href="#parcours" class="button-mini-nav">FORMATIONS</a>
+    <a href="#contact" class="button-mini-nav">CONTACT</a>
   </div>
 </div>
 
@@ -62,12 +62,16 @@
     <img src="images/10FDA8A8-41CA-4A3E-B6D4-98143BDAB007.jpg" alt="boy" class="image" width="992" height="1108">
   
   </header>
-  <a href="images/Lauriane_Dhaynaut.pdf" download>
-    <button class="button">
-      
-      <i class="fa fa-download"></i>Télécharger mon CV
-    </button>
-  </a> 
+    
+  <div class="button-download">
+    <a href="images/Lauriane_Dhaynaut.pdf" download>
+      <button class="button">
+        
+        <i class="fa fa-download"></i>Télécharger mon CV
+      </button>
+    </a> 
+  </div>
+
 
 
 
@@ -88,58 +92,28 @@
 
   <!-- Competences Section -->
   <div id="competences">
-    <h2 class="w3-text-light-grey">Mes compétences</h2>
+    <h2>Mes compétences</h2>
     <hr class="barre">
     <h3> Langages : </h3>
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span><img src="images/java.png" alt="LogoJava" class="image" ></span><br>
-        Java
-      </div>
-      <div class="w3-quarter w3-section">
-        <span><img src="images/html:css.png" alt="LogoHTMLCSS" class="image" ></span><br>
-        HTML/CSS
-      </div>
-      <div class="w3-quarter w3-section">
-        <span><img src="images/c.png" alt="LogoC" class="image" ></span><br>
-        C
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge"><img src="images/js.png" alt="LogoJavaScript" class="image" ></span><br>
-        JavaScript
-      </div>
+    <div class="langages">
+        <img src="images/java.png" alt="LogoJava" class="image2" >
+        <img src="images/html:css.png" alt="LogoHTMLCSS" class="image2" >
+        <img src="images/c.png" alt="LogoC" class="image2" >
+        <img src="images/js.png" alt="LogoJavaScript" class="image2" >
     </div>
 
-    <h3 class="w3-padding-16 w3-text-light-grey"> Outils : </h3>
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge"><img src="images/github.png" alt="LogoJava" class="image" ></span><br>
-        Github
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge"><img src="images/gitlab.png" alt="LogoHTMLCSS" class="image" ></span><br>
-        Gitlab
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge"><img src="images/vsc.png" alt="LogoC" class="image" ></span><br>
-        Visual Studio Code
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge"><img src="images/eclipse.png" alt="LogoJavaScript" class="image" ></span><br>
-        Eclipse
-      </div>
+    <h3> Outils : </h3>
+    <div class="outils">
+        <img src="images/github.png" alt="LogoJava" class="image2" >
+        <img src="images/gitlab.png" alt="LogoHTMLCSS" class="image2" >
+        <img src="images/vsc.png" alt="LogoC" class="image2" >
+        <img src="images/eclipse.png" alt="LogoJavaScript" class="image2" >
     </div>
 
-    <h3 class="w3-padding-16 w3-text-light-grey"> Bases de données : </h3>
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge"><img src="images/postgresql.png" alt="LogoJava" class="image" ></span><br>
-        PostgreSQL
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge"><img src="images/mongodb.png" alt="LogoHTMLCSS" class="image" ></span><br>
-        MongoDB
-      </div>
+    <h3> Bases de données : </h3>
+    <div class="bdd">
+        <img src="images/postgresql.png" alt="LogoJava" class="image3">
+        <img src="images/mongodb.png" alt="LogoHTMLCSS" class="image3" >
     </div>
   </div>
    
@@ -151,7 +125,7 @@
       <div class="item1">
         <ul style="list-style-type: none;">
           <li class=" w3-xlarge w3-padding-32">Affectation tuteurs/tutorés</li>
-          <li><img src="images/tuteurs.png" alt="AppTuteurs" class="image2" ><br></li>
+          <li><img src="images/tuteurs.png" alt="AppTuteurs" class="image4" ><br></li>
           <li class="w3-padding-16">Langages utilisés : Java/JavaFX </li>
           <li class="w3-padding-24">
             <button class="button-project w3-padding-16">Bientôt disponible</button>
@@ -163,7 +137,7 @@
         <a href="site/index2.html" style="text-decoration: none;" download>
         <ul style="list-style-type: none;">
           <li class=" w3-xlarge w3-padding-32">Création d'un site pour l'université </li>
-          <li><img src="images/moovle.png" alt="siteMoovle" class="image2" ><br></li>
+          <li><img src="images/moovle.png" alt="siteMoovle" class="image4" ><br></li>
           <li class="w3-padding-16">Langages utilisés : HTML/CSS</li>
           <li class="w3-padding-24 ligne">
             <button class="button-project w3-padding-16">Voir</button>
@@ -184,14 +158,14 @@
       <div class="container">
         <div>
             <ul class="timeline" style="list-style-type: none;">
-                <li id="panel3" style="display: block;">
+                <li id="panel" style="display: block;">
                     <div class="timeline-badge"><img src="images/iut.jpg" alt="logo iut"> </div>
                     <div class="timeline-panel-container-inverted">
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h3>IUT de Vileneuve d'Ascq</h3>
                                 <h4>BUT informatique</h4>
-                                <p class="text-muted"><span class="bi bi-clock-fill"></span> Septembre 2021 - Juillet 2024</p>
+                                <p>Septembre 2021 - Juillet 2024</p>
                             </div>
                             <div class="timeline-body">
                                 <p>Formation de l'informatique à des fins professionnelles, en programmation et en réseaux. </p>
@@ -200,7 +174,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="panel2" id="panel4" style="display: block;">
+                    <div class="panel" id="panel4" style="display: block;">
                         <div class="timeline-badge"><img src="images/Palm B.webp" alt="logo palm"> </div>
                         <div class="timeline-panel-container">
                             <div class="timeline-panel">
