@@ -1,1163 +1,300 @@
-html {
-    box-sizing: border-box
-}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lauriane Dhaynaut</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href=css/ePortfolio2.css>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/ecff8d8d3f.js" crossorigin="anonymous"></script>
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit
-}
+<style>
 
-body {
-    margin : 0
-}
+</style>
+</head>
+<body>
 
-.divisions {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 980px
-}
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="nav hide-small petite-ecriture">
+  <!-- Avatar image in top left corner -->
+  <img src="images/nvLogo1.png" class="logo">
+  <hr class="barre">
+  <a href="#" class=" button-nav">
+    <i class="fa fa-home icones"></i>
+    <p>ACCUEIL</p>
+  </a>
+  <a href="#competences" class=" button-nav" >
+    <i class="fa fa-user icones"></i>
+    <p>COMPETENCES</p>
+  </a>
+  <a href="#projects" class=" button-nav">
+    <i class="fa fa-eye icones"></i>
+    <p>PROJETS</p>
+  </a>
+  <a href="#parcours" class=" button-nav">
+    <i class="fas fa-solid fa-user-graduate icones"></i>
+    <p>FORMATIONS</p>
+  </a>
+  <a href="#contact" class=" button-nav">
+    <i class="fa fa-envelope icones"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
 
-body, h1,h2,h3,h4,h5,h6,p {
-    font-family: "Montserrat", sans-serif ; 
-    color: black;
-}
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top hide-large mini-nav" id="myNavbar">
+  <div class="inline">
+    <a href="#" class="button-nav">ACCUEIL</a>
+    <a href="#competences" class="button-mini-nav">COMPETENCES</a>
+    <a href="#projects" class="button-mini-nav">PROJETS</a>
+    <a href="#parcours" class="button-mini-nav">FORMATIONS</a>
+    <a href="#contact" class="button-mini-nav">CONTACT</a>
+  </div>
+</div>
 
-.petite-ecriture {
-    font-size: 12px !important
-}
-
-.w3-sidebar {width: 120px;background: #222;}
-
-
-/* menu */
-@media (min-width: 601px) {
-    .nav {
-        width: 120px;
-        background: rgb(185, 225, 172);
-        height: 100%;
-        background-color:  rgb(185, 225, 172);
-        position: fixed !important;
-        z-index: 1;
-        overflow: auto;
-        text-align: center;
-        margin-top: -2.2%;
-    }
-
-    .w3-modal-content {
-        width: 900px
-    }
-
-    .hide-large {
-        display: none !important
-    }
-
-    .nav .w3-collapse {
-        display: block !important
-    }
-}
-
-@media (max-width:768px){
-    .w3-modal-content{
-        width:500px;
-    }
-    .w3-modal{
-        padding-top:50px
-    }
-
-}
-
-@media (min-width:993px){
-    .w3-modal-content{
-        width:900px;
-    }
-    .w3-hide-large{
-        display:none!important;
-    }
-    .w3-sidebar.w3-collapse{
-        display:inline-block !important;
-    }
-}
-
-@media (max-width:992px) and (min-width:601px){
-    .w3-hide-medium{
-        display:none!important
-    }
-}
-
-@media (max-width:992px){
-    .w3-sidebar.w3-collapse{
-        display:none
-    }
-    .w3-main{
-        margin-left:0!important;
-        margin-right:0!important;
-    }
-    .w3-auto{
-        max-width:100%;
-    }
-}
-
-.icones {
-    font-size: 36px !important
-}
-
-.logo {
-    width: 75%;
-    padding-bottom: 5px;
-}
-
-.button-nav {
-    border: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    background-color:  rgb(185, 225, 172);
-    cursor: pointer;
-    white-space: nowrap;
-    width: 100%;
-    padding-top: 28.5px;
-}
-
-.button-nav:nth-of-type(1) {
-    margin-top: -20px;
-}
-
-.button-nav:hover {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(42, 64, 48) !important
-}
-
-.button-nav:hover p {
-    color : white;
-}
-
-/* accueil */
-
-header {
-    padding: 0.01em 16px;
-    color: #fff !important;
-    background-color: rgba(185, 225, 172, 0.247)!important;
-    display: inline-block;
-    width: auto;
-    text-align:center;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    position: relative;
-    margin-top: 2.5%;
-}
-
-header h1 {
-    font-size: 64px !important
-
-}
-
-.about {
-    margin-top: 7%;
-    margin-bottom: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 980px
-}
-
-/* footer */
-
-footer {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 20px !important;
-    font-family: "Montserrat", sans-serif ; 
-    vertical-align: middle;
-
-
-}
-
-/* toute la page du header au footer */
-
-.everything {
-    padding-left:10%;
-    padding-right: 2%;
-    transition: margin-left .4s
-}
-
-.button {
-    text-align:center !important;
-    border: none;
-    padding: 8px 16px;
-    text-decoration: none;
-    background-color: rgb(42, 64, 48) !important;
-    color: rgb(255, 255, 255) !important;
-    margin-top: 3%;
-    width: auto;
-    display: inline-block;
-    position: absolute;
-    left: 47.5%;
-}
-
-.button:hover {
-    background-color:  rgba(168, 166, 166) !important;
-    color: #000 !important;
-}
-
-/* compétences */
-
-#competences{
-    background-color: rgb(223, 218, 218);
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 15px;
-    padding-bottom: 20px ;
-}
-
-/* parcours  */
-
-#parcours{
-    background: rgb(223, 218, 218);
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top : 40px;
-    padding-bottom: 40px;
-}
-
-#education .heading h2 {
-    color: #fff;
-}
-
-.timeline
-{
-    position: relative;
-}
-.timeline:before
-{
-    content: " ";
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    width: 5px;
-    background-color: #333;
-    left: 50%;
-    margin-left: 15px;
-    border-radius: 15px;
-}
-.timeline > li
-{
-    margin-bottom: 20px;
-    position: relative;
-}
-.timeline > li:before,
-.timeline > li:after
-{
-    content: " ";
-    display: table;
-}
-.timeline > li:after
-{
-    clear: both;
-}
-.timeline li .timeline-badge
-{
-    width: 100px;
-    line-height: 100px;
-    text-align: center;
-    position: absolute;
-    top: 16px;
-    left:50%;
-    margin-left: -50px;
-    border-radius: 50%;
-}
-.timeline li .timeline-badge img
-{
-    max-width: 100%;
-    border-radius: 50%;
-}
-.timeline-panel-container
-{
-    width: 50%;
-    float:left;
-}
-.timeline-panel-container-inverted
-{
-    width: 50%;
-    float: right;
-}
-.timeline-panel
-{
-    width: 75%;
-    float: right;
-    margin-right: 75px;
-    border: 1px solid #d4d4d4;
-    border-radius: 7px;
-    padding: 20px 25px;
-    position: relative;
-    box-shadow: 0 1px 6px rgba(0,0,0, 0.175);
-    background-color: #fff;
-}
-.timeline-panel-container-inverted .timeline-panel
-{
-    float: left;
-    margin-left: 75px;
-}
-.timeline-panel:after
-{
-    position: absolute;
-    top: 50px;
-    right: -14px;
-    display: inline-block;
-    border-top: 14px solid transparent;
-    border-left: 14px solid #fff;
-    border-right: 0 solid #fff;
-    border-bottom: 14px solid transparent;
-    content: " ";
-}
-.timeline-panel-container-inverted .timeline-panel:after
-{
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto;
-}
-.timeline-heading h3
-{
-    margin-top: 5px;
-    font-size: 20px;
-}
-.panel2
-{
-    display: none;
-}
-/* quand screen - de 757 pixel */
-@media (max-width: 757px) {
-    .timeline:before
-    {
-        content: " ";
-        top: 30px;
-        bottom: 0;
-        position: absolute;
-        width: 5px;
-        background-color: #333;
-        left: 85%;
-        margin-left: -2.5px;
-        border-radius: 15px;
-    }
-    .timeline li .timeline-badge
-    {
-        width: 100px;
-        line-height: 100px;
-        text-align: center;
-        position: absolute;
-        top: 16px;
-        left:87%;
-        margin-left: -50px;
-        border-radius: 50%;
-        margin-top: 30px;
-    }
-    .timeline-panel-container
-    {
-        width: 80%;
-        float:left;
-    }
-    .timeline-panel
-    {
-        width: 75%;
-        float: right;
-        margin-top: 30px;
-        margin-right: 50px;
-        border: 1px solid #d4d4d4;
-        border-radius: 7px;
-        padding: 20px 25px;
-        position: relative;
-        box-shadow: 0 1px 6px rgba(0,0,0, 0.175);
-        background-color: #fff;
-    }
-}
-
-/* projets */
-
-#projects {
-    background-color: rgba(185, 225, 172, 0.247)!important;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-top: 2.5%;
-    padding-bottom: 2.5%;
-    margin-bottom: 2.5%;
-    padding-top: 2%;
-}
-
-.button-project {
-    background-color: rgb(42, 64, 48) !important;
-    color: rgb(255, 255, 255) !important;
-    text-align:center !important;
-    border: none;
-    padding: 8px 16px;
-    text-decoration: none;
-    width: auto;
-    display: inline-block;
-}
- 
-.w3-image2:nth-of-type(2) {
-    padding-top: 5%;
-
-}
-
-.contenant {
-    display : grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    grid-template-areas:
-    "a b";
-    margin : auto;
-
-    
-}
-
-.item1 {
+<!-- Page Content -->
+<div class="everything">
+  <!-- Header/Home -->
+  <header>
+    <h1> Lauriane Dhaynaut</h1>
+    <p>Developpeur en alternance chez Benalu</p>
+    <img src="images/10FDA8A8-41CA-4A3E-B6D4-98143BDAB007.jpg" alt="boy" class="image" width="992" height="1108">
   
-    background-color:  rgba(38, 58, 31, 0.432);
-    grid-area: a;
-    border-color: #000;
-    border-style: groove;
-    margin : auto ; 
-    text-align: center;
-
-}
-
-.item1:hover {
-    background-color:  rgb(255, 255, 255);
-
-}
-
-.item2 {
-    text-decoration: none;
-    background-color:  rgba(38, 58, 31, 0.432);
-    grid-area:b;
-    border-color: #000;
-    border-style: groove;
-    text-align: center;
-}
-
-.item2:hover {
-    text-decoration: none;
-    background-color:  rgb(255, 255, 255);
-}
-
-
-/* contact */
-
-#contact {
-    background-color: rgba(185, 225, 172, 0.247)!important;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-top: 10px;
-    padding-top: 40px;
-    padding-bottom: 100px;
-}
-
-/* barre de déco */
-
-.barre {
-    background-color: rgb(42, 64, 48) !important;
-    opacity: 0,9;
-    width:120px; 
-    height : 2px;
-}
-
-@media (min-width:993px) {
-    .w3-modal-content {
-        width: 900px
-    }
-
-    .w3-hide-large {
-        display: none !important
-    }
-
-    .nav .w3-collapse {
-        display: block !important
-    }
-}
-
-@media (max-width:992px) {
-    .nav.w3-collapse {
-        display: none
-    }
-
-    .w3-main {
-        margin-left: 0 !important;
-        margin-right: 0 !important
-    }
-
-    .w3-auto {
-        max-width: 100%
-    }
-}
-
-.petite-ecriture {
-    font-size: 12px !important
-}
-
-html {
-    box-sizing: border-box
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit
-}
-
-body {
-    margin : 0
-}
-
-.divisions {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 980px
-}
-
-footer,header,main,nav{
-    display: block
-}
-
-button,input{
-    font: inherit;
-    margin: 0
-}
-
-/* End extract */
-html,
-body {
-    font-family: Verdana, sans-serif;
-    font-size: 15px;
-    line-height: 1.5
-}
-
-html {
-    overflow-x: hidden
-}
-
-h1 {
-    font-size: 36px
-}
-
-h2 {
-    font-size: 30px
-}
-
-h3 {
-    font-size: 24px
-}
-
-h4 {
-    font-size: 20px
-}
-
-h5 {
-    font-size: 18px
-}
-
-h6 {
-    font-size: 16px
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 20px 0
-}
-
-.image {
-    max-width:20%;
-    height: auto;
-    border-radius: 50%;
-
-}
-
-.image2 {
-    max-width:50%;
-    height: auto;
-}
-
-a {
-    color: inherit
-}
-
-
-.w3-badge,
-.w3-tag {
-    background-color: #cc99e0;
-    color: #fff;
-    display: inline-block;
-    padding-left: 8px;
-    padding-right: 8px;
-    text-align: center
-}
-
-.w3-badge {
-    border-radius: 50%
-}
-
-.w3-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0
-}
-
-.w3-ul li {
-    padding: 8px 16px;
-    border-bottom: 1px solid #ddd
-}
-
-.w3-ul li:last-child {
-    border-bottom: none
-}
-
-.w3-tooltip,
-.w3-display-container {
-    position: relative
-}
-
-.w3-tooltip .w3-text {
-    display: none
-}
-
-.w3-tooltip:hover .w3-text {
-    display: inline-block
-}
-
-.w3-ripple:active {
-    opacity: 0.5
-}
-
-.w3-ripple {
-    transition: opacity 0s
-}
-
-.w3-input {
-    padding: 8px;
-    display: block;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    width: 100%
-}
-
-.w3-main,
-#main {
-    transition: margin-left .4s
-}
-
-
-.w3-bar {
-    width: 100%;
-    overflow: hidden
-}
-
-.w3-center .w3-bar {
-    display: inline-block;
-    width: auto
-}
-
-.w3-bar .w3-bar-item {
-    padding: 8px 16px;
-    width: auto;
-    border: none;
-    display: block;
-    outline: 0
-}
-
-.w3-bar .w3-dropdown-hover,
-.w3-bar .w3-dropdown-click {
-    position: static;
-    float: left
-}
-
-.w3-bar .w3-button {
-    white-space: normal
-}
-
-.w3-bar-block .w3-bar-item {
-    width: 100%;
-    display: block;
-    padding: 8px 16px;
-    text-align: left;
-    border: none;
-    white-space: normal;
-    float: none;
-    outline: 0
-}
-
-.w3-bar-block.w3-center .w3-bar-item {
-    text-align: center
-}
-
-.w3-block {
-    display: block;
-    width: 100%
-}
-
-.w3-responsive {
-    display: block;
-    overflow-x: auto
-}
-
-.w3-container:after,
-.w3-container:before,
-.w3-panel:after,
-.w3-panel:before,
-.w3-row:after,
-.w3-row:before,
-.w3-row-padding:after,
-.w3-row-padding:before,
-.w3-cell-row:before,
-.w3-cell-row:after,
-.w3-clear:after,
-.w3-clear:before,
-.w3-bar:before,
-.w3-bar:after {
-    content: "";
-    display: table;
-    clear: both
-}
-
-.w3-col,
-.w3-half,
-.w3-third,
-.w3-twothird,
-.w3-threequarter,
-.w3-quarter {
-    float: left;
-    width: 100%
-}
-
-.w3-col.s1 {
-    width: 8.33333%
-}
-
-.w3-col.s2 {
-    width: 16.66666%
-}
-
-.w3-col.s3 {
-    width: 24.99999%
-}
-
-.w3-col.s4 {
-    width: 33.33333%
-}
-
-.w3-col.s5 {
-    width: 41.66666%
-}
-
-.w3-col.s6 {
-    width: 49.99999%
-}
-
-.w3-col.s7 {
-    width: 58.33333%
-}
-
-.w3-col.s8 {
-    width: 66.66666%
-}
-
-.w3-col.s9 {
-    width: 74.99999%
-}
-
-.w3-col.s10 {
-    width: 83.33333%
-}
-
-.w3-col.s11 {
-    width: 91.66666%
-}
-
-.w3-col.s12 {
-    width: 99.99999%
-}
-
-@media (min-width:601px) {
-    .w3-col.m1 {
-        width: 8.33333%
-    }
-
-    .w3-col.m2 {
-        width: 16.66666%
-    }
-
-    .w3-col.m3,
-    .w3-quarter {
-        width: 24.99999%
-    }
-
-    .w3-col.m4,
-    .w3-third {
-        width: 33.33333%
-    }
-
-    .w3-col.m5 {
-        width: 41.66666%
-    }
-
-    .w3-col.m6,
-    .w3-half {
-        width: 49.99999%
-    }
-
-    .w3-col.m7 {
-        width: 58.33333%
-    }
-
-    .w3-col.m8,
-    .w3-twothird {
-        width: 66.66666%
-    }
-
-    .w3-col.m9,
-    .w3-threequarter {
-        width: 74.99999%
-    }
-
-    .w3-col.m10 {
-        width: 83.33333%
-    }
-
-    .w3-col.m11 {
-        width: 91.66666%
-    }
-
-    .w3-col.m12 {
-        width: 99.99999%
-    }
-}
-
-@media (min-width:993px) {
-    .w3-col.l1 {
-        width: 8.33333%
-    }
-
-    .w3-col.l2 {
-        width: 16.66666%
-    }
-
-    .w3-col.l3 {
-        width: 24.99999%
-    }
-
-    .w3-col.l4 {
-        width: 33.33333%
-    }
-
-    .w3-col.l5 {
-        width: 41.66666%
-    }
-
-    .w3-col.l6 {
-        width: 49.99999%
-    }
-
-    .w3-col.l7 {
-        width: 58.33333%
-    }
-
-    .w3-col.l8 {
-        width: 66.66666%
-    }
-
-    .w3-col.l9 {
-        width: 74.99999%
-    }
-
-    .w3-col.l10 {
-        width: 83.33333%
-    }
-
-    .w3-col.l11 {
-        width: 91.66666%
-    }
-
-    .w3-col.l12 {
-        width: 99.99999%
-    }
-}
-
-.w3-rest {
-    overflow: hidden
-}
-
-.w3-stretch {
-    margin-left: -16px;
-    margin-right: -16px
-}
-
-.w3-auto {
-    max-width: 1140px
-}
-
-.w3-cell-row {
-    display: table;
-    width: 100%
-}
-
-.w3-cell {
-    display: table-cell
-}
-
-.w3-cell-top {
-    vertical-align: top
-}
-
-.w3-cell-middle {
-    vertical-align: middle
-}
-
-.w3-cell-bottom {
-    vertical-align: bottom
-}
-
-.w3-hide {
-    display: none !important
-}
-
-.w3-show-block,
-.w3-show {
-    display: block !important
-}
-
-.w3-show-inline-block {
-    display: inline-block !important
-}
-
-@media (max-width:1205px) {
-    .w3-auto {
-        max-width: 95%
-    }
-}
-
-@media (max-width:600px) {
-    .w3-modal-content {
-        margin: 0 10px;
-        width: auto !important
-    }
-
-    .w3-modal {
-        padding-top: 30px
-    }
-
-    .w3-dropdown-hover.w3-mobile .w3-dropdown-content,
-    .w3-dropdown-click.w3-mobile .w3-dropdown-content {
-        position: relative
-    }
-
-    .w3-hide-small {
-        display: none !important
-    }
-
-    .w3-mobile {
-        display: block;
-        width: 100% !important
-    }
-
-    .w3-bar-item.w3-mobile,
-    .w3-dropdown-hover.w3-mobile,
-    .w3-dropdown-click.w3-mobile {
-        text-align: center
-    }
-
-    .w3-dropdown-hover.w3-mobile,
-    .w3-dropdown-hover.w3-mobile .w3-btn,
-    .w3-dropdown-hover.w3-mobile .w3-button,
-    .w3-dropdown-click.w3-mobile,
-    .w3-dropdown-click.w3-mobile .w3-btn,
-    .w3-dropdown-click.w3-mobile .w3-button {
-        width: 100%
-    }
-}
-
-@media (max-width:768px) {
-    .w3-modal-content {
-        width: 500px
-    }
-
-    .w3-modal {
-        padding-top: 50px
-    }
-}
-
-
-
-@media (max-width:992px) and (min-width:601px) {
-    .w3-hide-medium {
-        display: none !important
-    }
-}
-
-.w3-top,
-.w3-bottom {
-    position: fixed;
-    width: 100%;
-    z-index: 1
-}
-
-.w3-top {
-    top: 0
-}
-
-.w3-bottom {
-    bottom: 0
-}
-
-.w3-greyscale-max,
-.w3-grayscale-max,
-.w3-hover-greyscale:hover,
-.w3-hover-grayscale:hover {
-    filter: grayscale(100%)
-}
-
-.w3-greyscale,
-.w3-grayscale {
-    filter: grayscale(75%)
-}
-
-.w3-greyscale-min,
-.w3-grayscale-min {
-    filter: grayscale(50%)
-}
-
-.w3-medium {
-    font-size: 15px !important
-}
-
-.w3-large {
-    font-size: 18px !important
-}
-
-.w3-xlarge {
-    font-size: 24px !important
-}
-
-.w3-xxlarge {
-    font-size: 36px !important
-}
-
-.w3-xxxlarge {
-    font-size: 48px !important
-}
-
-.w3-jumbo {
-    font-size: 64px !important
-}
-
-.w3-left-align {
-    text-align: left !important
-}
-
-.w3-right-align {
-    text-align: right !important
-}
-
-.w3-justify {
-    text-align: justify !important
-}
-
-.w3-center {
-    text-align: center !important
-}
-
-
-.w3-section,
-.w3-code {
-    margin-top: 16px !important;
-    margin-bottom: 16px !important
-}
-
-.w3-padding-small {
-    padding: 4px 8px !important
-}
-
-.w3-padding {
-    padding: 8px 16px !important
-}
-
-.w3-padding-large {
-    padding: 12px 24px !important
-}
-
-.w3-padding-16 {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important
-}
-
-.w3-padding-24 {
-    padding-top: 24px !important;
-    padding-bottom: 24px !important
-}
-
-.w3-padding-32 {
-    padding-top: 32px !important;
-    padding-bottom: 32px !important
-}
-
-.w3-padding-48 {
-    padding-top: 48px !important;
-    padding-bottom: 48px !important
-}
-
-.w3-padding-64 {
-    padding-top: 64px !important;
-    padding-bottom: 64px !important
-}
-
-/* couleurs */
-
-.w3-black,
-.w3-hover-black:hover {
-    color: #fff !important;
-    background-color: rgb(223, 218, 218) !important
-}
-
-.w3-black2 {
-    color: #fff !important;
-    background-color: rgb(95, 95, 95) !important
-}
-
-.w3-grey,
-.w3-hover-grey:hover,
-.w3-gray,
-.w3-hover-gray:hover {
-    color: #000 !important;
-    background-color: #9e9e9e !important
-}
-
-.w3-light-grey,
-.w3-hover-light-grey:hover,
-.w3-light-gray,
-.w3-hover-light-gray:hover {
-    color: #000 !important;
-    background-color: #f1f1f1 !important
-}
-
-.w3-dark-grey,
-.w3-hover-dark-grey:hover,
-.w3-dark-gray,
-.w3-hover-dark-gray:hover {
-    color: #fff !important;
-    background-color: #616161 !important
-}
-
-
-.w3-row-padding img {margin-bottom: 12px}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+  </header>
+    
+  <div class="button-download">
+    <a href="images/Lauriane_Dhaynaut.pdf" download>
+      <button class="button">
+        
+        <i class="fa fa-download"></i>Télécharger mon CV
+      </button>
+    </a> 
+  </div>
+
+
+
+
+  <!-- About Section -->
+  <div class="about">
+    <h2>À propos de moi</h2>
+    <hr class="barre">
+    <p>Actuellement en reconversion professionnelle, je suis étudiante en alternance à l'IUT de Lille en BUT informatique, 
+      je souhaite développer mes compétences informatique et m'améliorer dans ce domaine autant passionnant qu'essentiel. 
+      J'ai toujours été curieuse et c'est l'une de mes principales qualité pour cette orientation. Sortie d'un Baccalauréat Scientifique, 
+      je me suis dirigée vers la biologie, mais je me suis rendue compte que ce domaine ne me plaisait pas réellement et que je 
+      ne voulais pas en faire mon métier. C'est pourquoi, j'ai décidé de travailler afin de mettre toutes mes chances de mon côté 
+      dans le but de reprendre mes études dans un domaine qui me correspondait mieux. 
+      Aujourd'hui, je suis épanouie dans mes études et souhaite faire de l'informatique mon métier principale. 
+
+    </p>
+  </div>
+
+  <!-- Competences Section -->
+  <div id="competences">
+    <h2>Mes compétences</h2>
+    <hr class="barre">
+    <h3> Langages : </h3>
+    <div class="langages">
+        <img src="images/java.png" alt="LogoJava" class="image2" >
+        <img src="images/html:css.png" alt="LogoHTMLCSS" class="image2" >
+        <img src="images/c.png" alt="LogoC" class="image2" >
+        <img src="images/js.png" alt="LogoJavaScript" class="image2" >
+    </div>
+
+    <h3> Outils : </h3>
+    <div class="outils">
+        <img src="images/github.png" alt="LogoJava" class="image2" >
+        <img src="images/gitlab.png" alt="LogoHTMLCSS" class="image2" >
+        <img src="images/vsc.png" alt="LogoC" class="image2" >
+        <img src="images/eclipse.png" alt="LogoJavaScript" class="image2" >
+    </div>
+
+    <h3> Bases de données : </h3>
+    <div class="bdd">
+        <img src="images/postgresql.png" alt="LogoJava" class="image3">
+        <img src="images/mongodb.png" alt="LogoHTMLCSS" class="image3" >
+    </div>
+  </div>
+   
+  <div id="projects">
+    <!-- Grid for pricing tables -->
+    <h2>Mes projets</h2>
+    <hr class="barre">
+    <div class="contenant">
+      <div class="item1">
+        <ul style="list-style-type: none;">
+          <li class=" w3-xlarge w3-padding-32">Affectation tuteurs/tutorés</li>
+          <li><img src="images/tuteurs.png" alt="AppTuteurs" class="image4" ><br></li>
+          <li class="w3-padding-16">Langages utilisés : Java/JavaFX </li>
+          <li class="w3-padding-24">
+            <button class="button-project w3-padding-16">Bientôt disponible</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="item2">
+        <a href="site/index2.html" style="text-decoration: none;" download>
+        <ul style="list-style-type: none;">
+          <li class=" w3-xlarge w3-padding-32">Création d'un site pour l'université </li>
+          <li><img src="images/moovle.png" alt="siteMoovle" class="image4" ><br></li>
+          <li class="w3-padding-16">Langages utilisés : HTML/CSS</li>
+          <li class="w3-padding-24 ligne">
+            <button class="button-project w3-padding-16">Voir</button>
+          </li>
+        </ul>
+        </a>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+  </div>
+  
+  <!-- Parcours Section -->
+  <div id="parcours">
+    <h2>Mon parcours</h2>
+    <hr class="barre">
+
+    <section id="education">
+      <div class="container">
+        <div>
+            <ul class="timeline" style="list-style-type: none;">
+                <li id="panel" style="display: block;">
+                    <div class="timeline-badge"><img src="images/iut.jpg" alt="logo iut"> </div>
+                    <div class="timeline-panel-container-inverted">
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3>IUT de Vileneuve d'Ascq</h3>
+                                <h4>BUT informatique</h4>
+                                <p>Septembre 2021 - Juillet 2024</p>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Formation de l'informatique à des fins professionnelles, en programmation et en réseaux. </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="panel" id="panel4" style="display: block;">
+                        <div class="timeline-badge"><img src="images/Palm B.webp" alt="logo palm"> </div>
+                        <div class="timeline-panel-container">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Le Palm B - Serveuse</h3>
+                                    <h4>Bandol, France</h4>
+                                    <p class="text-muted"><span class="bi bi-clock-fill"></span> Mai 2020 - Septembre 2020</p>
+                                    <p class="text-muted"><span class="bi bi-clock-fill"></span> Juin 2021 - Août 2021</p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Développement de mon esprit d'équipe, de ma rapidité.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge"><img src="images/uberEats.jpeg" alt="logo uberEats"> </div>
+                    <div class="timeline-panel-container-inverted">
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3>UberEats - Service Clientèle</h3>
+                                <h4>Lisbonne, Portugal</h4>
+                                <p class="text-muted"><span class="bi bi-clock-fill"></span> Septembre 2019 - Mai 2020</p>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Prendre en charge les demandes et et problèmes des restaurateurs
+                                  Respecter les procédures internes quant à la résolution du problème tout en assurant la meilleure qualité de service</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="panel" style="display: block;">
+                    <div class="timeline-badge"><img src="images/lespark.jpeg" alt="logo le s'park"> </div>
+                    <div class="timeline-panel-container">
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3>Restaurant Le S'park, serveuse</h3>
+                                <h4>Lezennes, France</h4>
+                                <p class="text-muted"><span class="bi bi-clock-fill"></span> Août 2018 - Septembre 2019</p>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Servir les clients et veiller au bon déroulement de leurs repas</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div id="panel" style="display: block;">
+                        <div class="timeline-badge"><img src="images/facLille.png" alt="logoFacLille"> </div>
+                        <div class="timeline-panel-container-inverted">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Faculté de Biologie - Licence Biochimie</h3>
+                                    <h4>Villeneuve d'Ascq, France</h4>
+                                    <p class="text-muted"><span class="bi bi-clock-fill"></span> Septembre 2015 - Juin 2019</p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge"><img src="images/téléchargement.png" alt="logo lycée Alexandre Ribot"> </div>
+                    <div class="timeline-panel-container">
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3>Lycée Alexandre Ribot - Baccalauréat scientifique</h3>
+                                <h4>Saint-Omer, France </h4>
+                                <p class="text-muted"><span class="bi bi-clock-fill"></span> Septembre 2011 - Juin 2014</p>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Spécialité SVT, mention assez-bien</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+          </div>
+      </div>
+  </section>
+  <!-- End Parcours Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <h2>Me contacter</h2>
+    <hr class="barre">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Lille, France</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Téléphone : +33 6 99 81 56 80</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: dhaynautlauriane@gmail.com</p>
+    </div><br>
+    <p>N'hésitez pas à m'envoyer un message : </p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="button" type="submit">
+          <i class="fa fa-paper-plane"></i> ENVOYER
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="divisions">
+    <i class="fa fa-linkedin"><p>Lauriane Dhaynaut</p></i>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
